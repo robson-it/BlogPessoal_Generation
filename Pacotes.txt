@@ -1,0 +1,5 @@
+source: imgur.com Documentação: Pacote FluentValidation.
+source: imgur.com Documentação: Pacote Entity Framework Core
+source: imgur.com Documentação: Pacote Entity Framework Core SQL Server.
+source: imgur.com Documentação: Pacote Entity Framework Core Tools
+source: imgur.com Documentação: Pacote AspNetCore Mvc Newtonsoft Json
