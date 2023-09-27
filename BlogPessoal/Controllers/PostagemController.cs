@@ -55,7 +55,13 @@ namespace BlogPessoal.Controllers
             {
                 return StatusCode(StatusCodes.Status400BadRequest, ValidarPostagem);
             }
-            await _postagemService.Create(postagem);
+            var resposta = await _postagemService.Create(postagem);
+
+            if(resposta is null)
+            {
+                return BadRequest("Tema não encontrado!");
+            }
+
             return CreatedAtAction(nameof(GetById), new { id = postagem.Id}, postagem);
         }
 
@@ -77,7 +83,7 @@ namespace BlogPessoal.Controllers
             
             if(Resposta is null)
             {
-                return NotFound("Postagem não encontrada!");
+                return NotFound("Postagem e/ou tema não encontrado(s)!");
             }
 
             return Ok(Resposta);
