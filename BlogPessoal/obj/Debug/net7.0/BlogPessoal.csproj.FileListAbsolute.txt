@@ -79,3 +79,5 @@ C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\obj\Debug\net7.0\refint
 C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\obj\Debug\net7.0\BlogPessoal.pdb
 C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\obj\Debug\net7.0\BlogPessoal.genruntimeconfig.cache
 C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\obj\Debug\net7.0\ref\BlogPessoal.dll
+C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\bin\Debug\net7.0\BCrypt.Net-Core.dll
+C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

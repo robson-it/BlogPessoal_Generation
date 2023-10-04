@@ -13,15 +13,25 @@ namespace BlogPessoal.Data
         {
             modelBuilder.Entity<Postagem>().ToTable("TB_POSTAGENS");
             modelBuilder.Entity<Tema>().ToTable("TB_TEMAS");
+            modelBuilder.Entity<User>().ToTable("TB_USUARIOS");
+           
             _ = modelBuilder.Entity<Postagem>()
                 .HasOne(_ => _.Tema)
                 .WithMany(t => t.Postagem)
                 .HasForeignKey("TemaId")
                 .OnDelete(DeleteBehavior.Cascade);
+
+            _ = modelBuilder.Entity<Postagem>()
+               .HasOne(_ => _.Usuario)
+               .WithMany(u => u.Postagens)
+               .HasForeignKey("UserId")
+               .OnDelete(DeleteBehavior.Cascade);
+
         }
 
         public DbSet<Postagem> Postagens { get; set; } = null!;
         public DbSet<Tema> Temas { get; set; } = null!;
+        public DbSet<User> Users { get; set; } = null!;
 
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
