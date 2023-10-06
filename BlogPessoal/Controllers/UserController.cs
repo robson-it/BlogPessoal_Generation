@@ -1,6 +1,8 @@
 ﻿using BlogPessoal.Model;
+using BlogPessoal.Security;
 using BlogPessoal.Service;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogPessoal.Controllers
@@ -12,23 +14,28 @@ namespace BlogPessoal.Controllers
 
         private readonly IUserService _userService;
         private readonly IValidator<User> _userValidator;
+        private readonly IAuthService _authService;
 
         public UserController(
             IUserService userService,
-            IValidator<User> userValidator
+            IValidator<User> userValidator,
+            IAuthService authService
             )
         {
             _userService = userService;
             _userValidator = userValidator;
+            _authService = authService;
 
         }
 
+        [Authorize]
         [HttpGet("listar")]
         public async Task<ActionResult> GetAll()
         {
             return Ok(await _userService.GetAll());
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(long id)
         {
@@ -42,6 +49,7 @@ namespace BlogPessoal.Controllers
             return Ok(Resposta);
         }
 
+        [AllowAnonymous]
         [HttpPost("cadastrar")]
         public async Task<ActionResult> Create([FromBody] User usuario)
         {
@@ -58,6 +66,7 @@ namespace BlogPessoal.Controllers
             return CreatedAtAction(nameof(GetById), new { id = Resposta.Id }, Resposta);
         }
 
+        [Authorize]
         [HttpPut("atualizar")]
         public async Task<ActionResult> Update([FromBody] User usuario)
         {
@@ -81,6 +90,20 @@ namespace BlogPessoal.Controllers
 
             return Ok(Resposta);
         }
+
+
+        [AllowAnonymous]
+        [HttpPost("logar")]
+        public async Task<ActionResult> Autenticar([FromBody] UserLogin usuarioLogin)
+        {
+            var Resposta = await _authService.Autenticar(usuarioLogin);
+
+            if (Resposta is null)
+                return Unauthorized("Usuário e/ou Senha inválidos!");
+
+            return Ok(Resposta);
+        }
+
 
     }
 }

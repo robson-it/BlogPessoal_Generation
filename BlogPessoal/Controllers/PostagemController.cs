@@ -2,11 +2,13 @@
 using BlogPessoal.Model;
 using BlogPessoal.Service;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace BlogPessoal.Controllers
 {
+    [Authorize]
     [Route("~/Postagens")]
     [ApiController]
     public class PostagemController : ControllerBase

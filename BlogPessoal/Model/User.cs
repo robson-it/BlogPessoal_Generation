@@ -21,6 +21,7 @@ namespace BlogPessoal.Model
         [Column(TypeName = "varchar")]
         [StringLength(3000)]
         public string? Foto {get; set;} = string.Empty;
+
         [InverseProperty("Usuario")]
         public virtual ICollection<Postagem>? Postagens { get; set; }
     }
