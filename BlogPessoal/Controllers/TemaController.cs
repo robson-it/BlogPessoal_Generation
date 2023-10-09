@@ -22,7 +22,7 @@ namespace BlogPessoal.Controllers
             _temaValdidator = temaValdidator;
         }
 
-        [HttpGet("listasTodos")]
+        [HttpGet("listarTodos")]
         public async Task<ActionResult> GetAll()
         {
             return Ok(await _temaService.GetAll());
