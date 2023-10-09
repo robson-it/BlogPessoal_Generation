@@ -22,7 +22,7 @@ namespace BlogPessoal.Controllers
             _postagemValdidator = postagemValdidator;
         }
 
-        [HttpGet]
+        [HttpGet("listarTodos")]
         public async Task<ActionResult> GetAll()
         {
             return Ok(await _postagemService.GetAll());
@@ -49,7 +49,7 @@ namespace BlogPessoal.Controllers
             return Ok(await _postagemService.GetByTitulo(titulo));
         }
 
-        [HttpPost]
+        [HttpPost("cadastrar")]
         public async Task<ActionResult> Create ([FromBody] Postagem postagem)
         {
             var ValidarPostagem  = await _postagemValdidator.ValidateAsync(postagem);
@@ -67,7 +67,7 @@ namespace BlogPessoal.Controllers
             return CreatedAtAction(nameof(GetById), new { id = postagem.Id}, postagem);
         }
 
-        [HttpPut]
+        [HttpPut("atualizar")]
         public async Task<ActionResult> Update([FromBody] Postagem postagem)
         {
             if (postagem.Id == 0)
@@ -91,7 +91,7 @@ namespace BlogPessoal.Controllers
             return Ok(Resposta);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("deletar/{id}")]
         public async Task<IActionResult> Delete(long id)
         {
 

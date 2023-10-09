@@ -81,3 +81,7 @@ C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\obj\Debug\net7.0\BlogPe
 C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\obj\Debug\net7.0\ref\BlogPessoal.dll
 C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\bin\Debug\net7.0\BCrypt.Net-Core.dll
 C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\bin\Debug\net7.0\MicroElements.Swashbuckle.FluentValidation.dll
+C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\bin\Debug\net7.0\Scrutor.dll
+C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Robson\Documents\ProjetoBlogPessoal\BlogPessoal\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

@@ -22,7 +22,7 @@ namespace BlogPessoal.Controllers
             _temaValdidator = temaValdidator;
         }
 
-        [HttpGet]
+        [HttpGet("listasTodos")]
         public async Task<ActionResult> GetAll()
         {
             return Ok(await _temaService.GetAll());
@@ -49,7 +49,7 @@ namespace BlogPessoal.Controllers
             return Ok(await _temaService.GetByDescricao(descricao));
         }
 
-        [HttpPost]
+        [HttpPost("cadastrar")]
         public async Task<ActionResult> Create ([FromBody] Tema tema)
         {
             var ValidarTema  = await _temaValdidator.ValidateAsync(tema);
@@ -61,7 +61,7 @@ namespace BlogPessoal.Controllers
             return CreatedAtAction(nameof(GetById), new { id = tema.Id}, tema);
         }
 
-        [HttpPut]
+        [HttpPut("atualizar")]
         public async Task<ActionResult> Update([FromBody] Tema tema)
         {
             if (tema.Id == 0)
@@ -85,7 +85,7 @@ namespace BlogPessoal.Controllers
             return Ok(Resposta);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("deletar/{id}")]
         public async Task<IActionResult> Delete(long id)
         {
 
