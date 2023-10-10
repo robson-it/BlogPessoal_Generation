@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Robson\\Documents\\ProjetoBlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {}
+    "C:\\Users\\Robson\\Documents\\GenerationProjetos\\BlogPessoal_Generation\\BlogPessoal\\BlogPessoal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Robson\\Documents\\ProjetoBlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {
+    "C:\\Users\\Robson\\Documents\\GenerationProjetos\\BlogPessoal_Generation\\BlogPessoal\\BlogPessoal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Robson\\Documents\\ProjetoBlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
+        "projectUniqueName": "C:\\Users\\Robson\\Documents\\GenerationProjetos\\BlogPessoal_Generation\\BlogPessoal\\BlogPessoal.csproj",
         "projectName": "BlogPessoal",
-        "projectPath": "C:\\Users\\Robson\\Documents\\ProjetoBlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
+        "projectPath": "C:\\Users\\Robson\\Documents\\GenerationProjetos\\BlogPessoal_Generation\\BlogPessoal\\BlogPessoal.csproj",
         "packagesPath": "C:\\Users\\Robson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Robson\\Documents\\ProjetoBlogPessoal\\BlogPessoal\\obj\\",
+        "outputPath": "C:\\Users\\Robson\\Documents\\GenerationProjetos\\BlogPessoal_Generation\\BlogPessoal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -81,6 +81,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.11, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.18.1, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",

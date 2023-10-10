@@ -1,4 +1,5 @@
-﻿using BlogPessoal.Model;
+﻿using blogpessoal.Configuration;
+using BlogPessoal.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogPessoal.Data
@@ -63,6 +64,13 @@ namespace BlogPessoal.Data
             }
 
             return base.SaveChangesAsync(cancellationToken);
+        }
+
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            configurationBuilder
+                .Properties<DateTimeOffset>()
+                .HaveConversion<DateTimeOffsetConverter>();
         }
     }
 }
