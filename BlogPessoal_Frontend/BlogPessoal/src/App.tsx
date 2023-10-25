@@ -1,11 +1,26 @@
-import Home from './pages/home/home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/home/Home';
+import Footer from './Components/Footer/Footer';
+import Navbar from './Components/Navbar/Navbar';
+import Login from './pages/login/Login';
+import Cadastro from './pages/cadastro/Cadastro';
 
 function App() {
-    return (
-        <Home />
-    )
-}
-
+  return (
+    <BrowserRouter>
+        <Navbar />
+          <div className='min-h-[80vh]'>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/cadastro" element={<Cadastro />} />
+            </Routes>
+          </div>  
+        <Footer />
+      </BrowserRouter>
+  )
+  }
 export default App
 
 
