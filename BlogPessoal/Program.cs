@@ -33,7 +33,7 @@ namespace BlogPessoal
                     }
                 );
 
-            //Conexão com o Banco de Dados
+            //Conexï¿½o com o Banco de Dados
             if (builder.Configuration["Enviroment:Start"].Equals("PROD"))
             {
                 builder.Configuration.SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("secrets.json");
@@ -52,12 +52,12 @@ namespace BlogPessoal
 
             }
 
-            //Registar a Validação das Entidades
+            //Registar a Validaï¿½ï¿½o das Entidades
             builder.Services.AddTransient<IValidator<Postagem>, PostagemValidator>();
             builder.Services.AddTransient<IValidator<Tema>, TemaValidator>();
             builder.Services.AddTransient<IValidator<User>, UserValidator>();
 
-            //Registrar as Classes de Serviço
+            //Registrar as Classes de Serviï¿½o
             builder.Services.AddScoped<IPostagemService, PostagemService>();
             builder.Services.AddScoped<ITemaService, TemaService>();
             builder.Services.AddScoped<IUserService, UserService>();
@@ -90,7 +90,7 @@ namespace BlogPessoal
             builder.Services.AddSwaggerGen(options =>
             {
 
-                //Personalizar a Págna inicial do Swagger
+                //Personalizar a Pï¿½gna inicial do Swagger
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
@@ -109,18 +109,18 @@ namespace BlogPessoal
                     }
                 });
 
-                //Adicionar a Segurança no Swagger
+                //Adicionar a Seguranï¿½a no Swagger
                 options.AddSecurityDefinition("JWT", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
-                    Description = "Digite um Token JWT válido!",
+                    Description = "Digite um Token JWT vï¿½lido!",
                     Name = "Authorization",
                     Type = SecuritySchemeType.Http,
                     BearerFormat = "JWT",
                     Scheme = "Bearer"
                 });
 
-                //Adicionar a configuração visual da Segurança no Swagger
+                //Adicionar a configuraï¿½ï¿½o visual da Seguranï¿½a no Swagger
                 options.OperationFilter<AuthResponsesOperationFilter>();
 
             });
@@ -128,7 +128,7 @@ namespace BlogPessoal
             // Adicionar o Fluent Validation no Swagger
             builder.Services.AddFluentValidationRulesToSwagger();
 
-            //Configuração do CORS
+            //Configuraï¿½ï¿½o do CORS
             builder.Services.AddCors(options => {
                 options.AddPolicy(name: "MyPolicy", policy => { policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); });
             });
@@ -159,8 +159,8 @@ namespace BlogPessoal
                 app.UseSwaggerUI();
             
 
-            //Inicializa o CORS (MyPolice)
-            app.UseCors("MyPolice");
+            //Inicializa o CORS (MyPolicy)
+            app.UseCors("MyPolicy");
 
             app.UseAuthentication();
 
