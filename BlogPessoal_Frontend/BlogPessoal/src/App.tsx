@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
 import Home from './pages/home/Home';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
@@ -7,20 +8,22 @@ import Cadastro from './pages/cadastro/Cadastro';
 
 function App() {
   return (
-    <BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
         <Navbar />
-          <div className='min-h-[80vh]'>
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/cadastro" element={<Cadastro />} />
-            </Routes>
-          </div>  
+        <div className='min-h-[80vh]'>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
+    </AuthProvider>
   )
-  }
+}
 export default App
 
 
