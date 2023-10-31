@@ -5,6 +5,8 @@ import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';
+import ListaTemas from './Components/Temas/ListaTemas/ListaTemas';
+import FormularioTema from './Components/Temas/FormularioTema/FormularioTema';
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/temas" element={<ListaTemas />} />
+            <Route path="/cadastroTema" element={<FormularioTema />} />
+            <Route path="/editarTema/:id" element={<FormularioTema />} />
           </Routes>
         </div>
         <Footer />
