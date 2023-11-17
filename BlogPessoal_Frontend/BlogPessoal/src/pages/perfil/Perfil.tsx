@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 
 import { AuthContext } from '../../contexts/AuthContext'
 import { toastAlerta } from '../../utils/toastAlerta'
-import { Info } from '@phosphor-icons/react'
 
 function Perfil() {
 
