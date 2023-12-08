@@ -14,7 +14,9 @@ export default {
       paleta5: "#BCA37F",
       paleta6: "#776B5D",
       white: "#FFFFFF",
-      fundoLogin: "#363636"
+      fundoLogin: "#363636",
+      deletar: "#C70039",
+      editar: "#009FBD"
     }
   },
   plugins: [],

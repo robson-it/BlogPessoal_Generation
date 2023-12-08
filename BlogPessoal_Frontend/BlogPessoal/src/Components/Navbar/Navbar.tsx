@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import { ListPlus, House, SignOut } from '@phosphor-icons/react'
 import { toastAlerta } from '../../utils/toastAlerta'
+import ModalPostagem from '../Postagens/ModalPostagem/ModalPostagem'
 
 
 function Navbar() {
@@ -57,20 +58,16 @@ function Navbar() {
                             <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome.split(' ').slice(0,1)}</h6>
                         </Link>
 
-                        <Link to='/perfil' className='hover:underline'>
-                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4">
-                                <ListPlus size={28}></ListPlus>
-                            </div>
-                            <h6 className='text-sm text-center ml-12'>Postar</h6>
-                        </Link>
+                        <ModalPostagem id={0} operacao={'novaPostagem'} />
+
                         <Link to='/home' className='hover:underline'>
-                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4">
+                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md">
                                 <House size={28}></House>
                             </div>
                             <h6 className='text-sm text-center ml-12'>Home</h6>
                         </Link>
                         <Link to='' onClick={logout} className='hover:underline'>
-                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4">
+                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md">
                                 <SignOut size={28}></SignOut>
                             </div>
                             <h6 className='text-sm text-center ml-12'>Sair</h6>
@@ -91,6 +88,8 @@ function Navbar() {
                             </div>
                             <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome.split(' ').slice(0,1)}</h6>
                         </Link>
+
+                        
 
                         <Link to='/perfil' className='hover:underline'>
                             <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4">

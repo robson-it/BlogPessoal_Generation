@@ -10,7 +10,7 @@ function Home() {
                         <h2 className='lg:text-5xl text-xl font-bold pl-2'>
                             Seja Bem-Vindo(a)!
                         </h2>
-                        <p className='text-xl pl-2'>
+                        <p className='text-md pl-4'>
                             Expresse aqui seus pensamentos e opniões
                         </p>
 

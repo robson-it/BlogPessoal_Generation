@@ -9,7 +9,7 @@ import Tema from '../../../models/Tema';
 import Postagem from '../../../models/Postagem';
 import { toastAlerta } from '../../../utils/toastAlerta';
 
-function FormularioPostagem() {
+function FormularioPostagem(props: {idPostagem?: string}) {
 
     const navigate = useNavigate();
 
@@ -19,7 +19,8 @@ function FormularioPostagem() {
     const [tema, setTema] = useState<Tema>({ id: 0, descricao: '', })
     const [postagem, setPostagem] = useState<Postagem>({} as Postagem)
 
-    const { id } = useParams<{ id: string }>()
+    // const { id } = useParams<{ id: string }>()
+    const id = props.idPostagem
 
     const { usuario, handleLogout } = useContext(AuthContext)
     const token = usuario.token

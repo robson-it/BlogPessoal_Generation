@@ -8,14 +8,15 @@ import { AuthContext } from '../../../contexts/AuthContext'
 import Postagem from '../../../models/Postagem'
 import { toastAlerta } from '../../../utils/toastAlerta'
 
-function DeletarPostagem() {
+function DeletarPostagem(props: {idPostagem?: string}) {
 
     const navigate = useNavigate()
 
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [postagem, setPostagem] = useState<Postagem>({} as Postagem)
 
-    const { id } = useParams<{ id: string }>()
+    // const { id } = useParams<{ id: string }>()
+    const id = props.idPostagem
 
     const { usuario, handleLogout } = useContext(AuthContext)
     const token = usuario.token
