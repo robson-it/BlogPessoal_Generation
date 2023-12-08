@@ -7,10 +7,10 @@ function Home() {
             <div className="bg-paleta1 flex justify-center ">
                 <div className='container grid grid-cols-2 text-paleta4'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
-                        <h2 className='text-5xl font-bold'>
+                        <h2 className='lg:text-5xl text-xl font-bold pl-2'>
                             Seja Bem-Vindo(a)!
                         </h2>
-                        <p className='text-xl'>
+                        <p className='text-xl pl-2'>
                             Expresse aqui seus pensamentos e opniões
                         </p>
 
