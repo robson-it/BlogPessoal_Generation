@@ -36,10 +36,10 @@ function Login() {
     return (
         <>
             <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-gradient-to-t from-paleta1 from-50% to-paleta4 to-50% text-paleta4">
-            <div className="fundoLogin hidden lg:block ">
-                <img src='/trinitas2.png' className='mt-4 ml-32 w-1/2'></img>
-            </div>
-            <form className="flex justify-center items-center flex-col w-3/4 lg:w-1/2 gap-4  rounded-xl p-10 bg-paleta1 shadow shadow-md shadow-paleta4" 
+                <div className="fundoLogin hidden lg:block ">
+                    <img src='/trinitas2.png' className='mt-4 ml-32 w-1/2'></img>
+                </div>
+                <form className="flex justify-center items-center flex-col w-3/4 lg:w-1/2 gap-4  rounded-xl p-10 bg-paleta1 shadow shadow-md shadow-paleta4"
                     onSubmit={login}>
                     <h4 className="text-slate-900 text-2xl ">Entrar</h4>
                     <div className="flex flex-col w-full">
@@ -62,7 +62,7 @@ function Login() {
                             name="senha"
                             placeholder="Senha"
                             className="border-2 border-slate-700 rounded p-2"
-                            value={usuarioLogin.senha} 
+                            value={usuarioLogin.senha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         />
                     </div>
@@ -89,7 +89,7 @@ function Login() {
                         </Link>
                     </p>
                 </form>
-                
+
             </div>
         </>
     );

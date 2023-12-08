@@ -74,29 +74,29 @@ function DeletarTema(props: {idTema?: string}) {
     }
 
     return (
-        <div className='container w-1/3 mx-auto'>
-            <h1 className='text-4xl text-center my-4'>Deletar Tema</h1>
+        <div className='container w-full p-0 mx-auto'>
+            <h1 className='text-2xl text-center rounded-t-md mb-2 pb-2 bg-paleta4 text-paleta1'>Deletar Tema</h1>
 
             <p className='text-center font-semibold mb-4'>
                 Você tem certeza de que deseja apagar o tema a seguir?
             </p>
 
-            <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-                <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
+            <div className='border flex flex-col rounded-md overflow-hidden justify-between mb-2'>
+                <header className='py-2 px-6 bg-paleta4 text-paleta1 font-semibold text-xl'>
                     Tema
                 </header>
                 <p className='p-8 text-3xl bg-slate-200 h-full'>{tema.descricao}</p>
 
-                <div className="flex">
+                <div className="flex ">
 
                     <button
-                        className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'
+                        className='text-slate-100 bg-paleta4 text-white hover:bg-editar w-full py-1'
                         onClick={retornar}>
                         Não
                     </button>
 
                     <button
-                        className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 
+                        className='w-full text-slate-100 bg-paleta2 text-white hover:bg-deletar 
                             flex items-center justify-center'
                         onClick={deletarTema}>
 

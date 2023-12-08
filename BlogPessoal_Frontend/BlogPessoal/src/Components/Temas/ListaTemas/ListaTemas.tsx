@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Vortex } from 'react-loader-spinner';
 
 import { buscar } from '../../../services/Service';
@@ -12,7 +12,7 @@ import { toastAlerta } from '../../../utils/toastAlerta';
 function ListaTemas() {
 
     const [temas, setTemas] = useState<Tema[]>([]);
-
+    const location = useLocation();
     const navigate = useNavigate();
 
     const { usuario, handleLogout } = useContext(AuthContext);
@@ -41,6 +41,10 @@ function ListaTemas() {
     useEffect(() => {
         buscarTemas()
     }, [temas.length])
+
+    useEffect(() => {
+        buscarTemas()
+    }, [location.key])
 
     return (
         <>

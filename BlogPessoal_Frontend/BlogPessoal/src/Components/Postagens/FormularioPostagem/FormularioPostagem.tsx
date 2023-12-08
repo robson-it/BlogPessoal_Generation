@@ -96,7 +96,7 @@ function FormularioPostagem(props: {idPostagem?: string}) {
                     },
                 });
 
-                alert('Postagem atualizada com sucesso')
+                toastAlerta('Postagem atualizada com sucesso', 'sucesso')
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
@@ -134,8 +134,8 @@ function FormularioPostagem(props: {idPostagem?: string}) {
     const carregandoTema = tema.descricao === '';
 
     return (
-        <div className="container flex flex-col mx-auto items-center bg-paleta1 rounded-lg text-paleta4">
-            <h1 className="text-2xl text-center my-8">
+        <div className="container flex flex-col items-center bg-paleta1 rounded-lg text-paleta4 w-full">
+            <h1 className="text-2xl text-center pb-2 my-0 bg-paleta4 text-paleta1 w-full rounded-t-md">
                 {id !== undefined ? 'Editar Postagem' : 'Cadastrar Postagem'}
             </h1>
 
@@ -183,7 +183,7 @@ function FormularioPostagem(props: {idPostagem?: string}) {
                 <button
                     type='submit'
                     disabled={carregandoTema}
-                    className='flex justify-center rounded disabled:bg-slate-200 bg-paleta4 
+                    className='flex justify-center rounded-b-md disabled:bg-slate-200 bg-paleta4 
                             hover:bg-editar text-white font-bold w-full mx-auto py-1'
                 >
                     {isLoading ?

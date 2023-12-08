@@ -109,11 +109,11 @@ function FormularioTema(props: {idTema?: string}) {
 
     return (
         <div className="container flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-4xl text-center my-8">
+            <h1 className="text-2xl rounded-t-md bg-paleta4 text-paleta1 w-full text-center mb-2">
                 {id === undefined ? 'Cadastrar Tema' : 'Editar Tema'}
             </h1>
 
-            <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
+            <form className="w-full p-2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
                 <div className="flex flex-col gap-2">
                     <label htmlFor="descricao">Descrição do Tema</label>
                     <input
@@ -126,8 +126,8 @@ function FormularioTema(props: {idTema?: string}) {
                     />
                 </div>
                 <button
-                    className="rounded text-slate-100 bg-indigo-400 
-                    hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center" type="submit">
+                    className="rounded text-paleta1 bg-paleta4 
+                    hover:bg-editar hover:bg-indigo-800 w-full py-1 mx-auto flex justify-center" type="submit">
 
                     {isLoading ?
                         <RotatingLines

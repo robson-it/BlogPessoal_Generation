@@ -2,10 +2,10 @@ import Popup from 'reactjs-popup';
 import FormularioTema from '../FormularioTema/FormularioTema';
 import DeletarTema from '../DeletarTema/DeletarTema';
 import { ListPlus, XCircle, Trash, NotePencil } from '@phosphor-icons/react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import 'reactjs-popup/dist/index.css';
-import {  useState } from 'react';
+import {  useEffect, useState } from 'react';
 
 
 
@@ -13,10 +13,13 @@ const ModalTema = (propriedades: any) => {
 
     const idModal = propriedades.id
     const operacaoModal = propriedades.operacao
-    
+    const location = useLocation();
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
 
+    useEffect(() => {
+        closeModal()
+    }, [location.key])
 
     return (
         <>
@@ -52,7 +55,7 @@ const ModalTema = (propriedades: any) => {
 
                 modal
             >
-                <div className="pl-1 pt-1 container flex justify-end items-center absolute pr-4 text-paleta4 " >
+                <div className="pl-1 pt-1 container flex justify-end items-center absolute pr-4 text-paleta1 " >
                     <Link to="/temas" className="close" id="fecharModal" onClick={closeModal}>
                         <XCircle size={28} weight="bold" />
                     </Link>

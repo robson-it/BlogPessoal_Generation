@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Vortex } from 'react-loader-spinner';
 
 import { buscar } from '../../../services/Service';
@@ -12,6 +12,7 @@ import { toastAlerta } from '../../../utils/toastAlerta';
 function ListaPostagens() {
 
     const navigate = useNavigate();
+    const location = useLocation();
 
     const [postagens, setPostagens] = useState<Postagem[]>([]);
 
@@ -44,6 +45,10 @@ function ListaPostagens() {
     useEffect(() => {
         buscarPostagens()
     }, [postagens.length])
+
+    useEffect(() => {
+        buscarPostagens()
+    }, [location.key])
 
     return (
 

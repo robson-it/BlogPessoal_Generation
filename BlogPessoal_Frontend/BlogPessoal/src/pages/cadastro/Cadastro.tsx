@@ -67,23 +67,25 @@ function Cadastro() {
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
-                <div className="fundoCadastro hidden lg:block"></div>
-                <form 
-        className='flex justify-center items-center flex-col w-2/3 gap-3' 
-        onSubmit={cadastrarNovoUsuario}>
-		<h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
-		<div className="flex flex-col w-full">
-         	<label htmlFor="nome">Nome</label>
-            	<input
-                	type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Nome"
-                    className="border-2 border-slate-700 rounded p-2"
-                    value={usuario.nome}
-                    onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-				/>
+            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-gradient-to-t from-paleta1 from-50% to-paleta4 to-50% text-paleta4">
+                <div className="fundoLogin hidden lg:block ">
+                    <img src='/trinitas2.png' className='mt-4 ml-32 w-1/2'></img>
+                </div>
+                <form
+                    className='flex justify-center items-center flex-col w-3/4 lg:w-3/4 gap-4  rounded-xl p-10 bg-paleta1 shadow shadow-md shadow-paleta4'
+                    onSubmit={cadastrarNovoUsuario}>
+                    <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
+                    <div className="flex flex-col w-full">
+                        <label htmlFor="nome">Nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Nome"
+                            className="border-2 border-slate-700 rounded p-2"
+                            value={usuario.nome}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        />
                     </div>
                     <div className="flex flex-col w-full">
                         <label htmlFor="usuario">Usuario</label>
@@ -133,23 +135,23 @@ function Cadastro() {
                             onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
                         />
                     </div>
-                    <div className="flex justify-around w-full gap-8">
-                        <button 
-                           	className='rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2'
+                    <div className="flex justify-around w-full gap-0">
+                        <button
+                            className='rounded-bl-md text-white bg-paleta3 hover:bg-deletar w-full py-1'
                             onClick={retornar}>
-                            	Cancelar
+                            Cancelar
                         </button>
-                        <button 
-                            className='rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 
-                                       py-2 flex justify-center' 
+                        <button
+                            className='rounded-br-md text-white bg-paleta4 hover:bg-editar w-full
+                                       py-1 flex justify-center'
                             type='submit'>
-                                {isLoading ? <RotatingLines
-                                    strokeColor="white"
-                                    strokeWidth="5"
-                                    animationDuration="0.75"
-                                    width="24"
-                                    visible={true}
-                                /> :
+                            {isLoading ? <RotatingLines
+                                strokeColor="white"
+                                strokeWidth="5"
+                                animationDuration="0.75"
+                                width="24"
+                                visible={true}
+                            /> :
                                 <span>Cadastrar</span>}
                         </button>
                     </div>
