@@ -56,22 +56,22 @@ function Navbar() {
                         <h6 className='text-sm text-center'>Home</h6>
                     </Link>
                     <Link to='/postagens' className='hover:underline'>
-                        <div className="text-white justify-center items-center ml-16 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
+                        <div className="text-white justify-center items-center lg:ml-16 ml-8 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
                             <Newspaper size={28}></Newspaper>
                         </div>
-                        <h6 className='text-sm text-center ml-14'>Postagens</h6>
+                        <h6 className='text-sm text-center lg:ml-14 ml-7'>Postagens</h6>
                     </Link>
                     <Link to='/temas' className='hover:underline'>
-                        <div className="text-white justify-center items-center ml-16 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
+                        <div className="text-white justify-center items-center lg:ml-16 ml-8 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
                             <Notebook size={28}></Notebook>
                         </div>
-                        <h6 className='text-sm text-center ml-16'>Temas</h6>
+                        <h6 className='text-sm text-center lg:ml-16 ml-8'>Temas</h6>
                     </Link>
                     <Link to='' onClick={logout} className='hover:underline'>
-                        <div className="text-white justify-center items-center ml-16 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
+                        <div className="text-white justify-center items-center lg:ml-16 ml-8 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
                             <SignOut size={28}></SignOut>
                         </div>
-                        <h6 className='text-sm text-center ml-16'>Sair</h6>
+                        <h6 className='text-sm text-center lg:ml-16 ml-8'>Sair</h6>
                     </Link>
                 </div></>
         )
