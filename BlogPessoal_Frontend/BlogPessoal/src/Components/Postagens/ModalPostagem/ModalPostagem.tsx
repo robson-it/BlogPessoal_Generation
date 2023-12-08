@@ -28,11 +28,11 @@ const ModalPostagem = (propriedades: any) => {
 
                 <>
                     <p className='hover:underline cursor-pointer' onClick={() => setOpen(o => !o)}>
-                        <div className="text-white justify-center items-center ml-6 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 hover:bg-editar">
+                        <div className="text-white justify-center items-center lg:mr-16 mr-8 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 hover:bg-editar">
                             <ListPlus size={28} ></ListPlus>
                         </div>
 
-                        <h6 className='text-sm text-center ml-6'>Postar</h6>
+                        <h6 className='text-sm text-center lg:mr-16 mr-8'>Postar</h6>
                     </p>
                 </>
             }
