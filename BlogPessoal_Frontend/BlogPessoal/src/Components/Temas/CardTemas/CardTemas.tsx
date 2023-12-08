@@ -13,11 +13,11 @@ function CardTemas({ tema }: CardTemasProps) {
 
     return (
         <div className='shadow shadow-paleta4 shadow-lg  flex flex-col rounded overflow-hidden justify-between'>
-            <header className='py-2 px-6 bg-paleta4 text-white font-bold text-2xl'>
+            <header className='py-1 px-6 bg-paleta4 text-white font-semibold text-lg'>
                 Tema
             </header>
 
-            <p className='p-8 text-3xl bg-paleta1 h-full text-paleta4'>
+            <p className='p-8 text-xl bg-paleta1 h-full text-paleta4'>
                 {tema.descricao}
             </p>
             {

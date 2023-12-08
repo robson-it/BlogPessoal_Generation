@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 import { AuthContext } from '../../contexts/AuthContext'
 import { ListPlus, House, SignOut } from '@phosphor-icons/react'
+import { toastAlerta } from '../../utils/toastAlerta'
 
 
 function Navbar() {
@@ -12,7 +13,7 @@ function Navbar() {
 
     function logout() {
         handleLogout()
-        alert('Usuário deslogado com sucesso')
+        toastAlerta('Usuário deslogado com sucesso', "sucesso")
         navigate('/login')
     }
 
@@ -21,7 +22,7 @@ function Navbar() {
     if (usuario.token !== "") {
 
         component = (
-            <div className='w-full bg-paleta4 text-paleta1 flex justify-center py-4'>
+            <div className='w-full bg-paleta4 text-paleta1 flex justify-center pb-2 pt-4 px-4'>
                 <div className=" container flex justify-between text-lg">
                     <Link to='/home' className='text-2xl font-bold'>Trinitas</Link>
 
@@ -49,11 +50,11 @@ function Navbar() {
                     <div className='flex relative bg-gradient-to-t from-paleta1 from-60% to-paleta4 to-40% shadow-md shadow-paleta4 w-58 rounded-b justify-center items-center  text-paleta4'>
                         <Link to='/perfil' className='hover:underline'>
                             <div className="flex relative w-10 h-10 mb-1 ml-1 bg-paleta4 text-paleta1 items-center gap-0 rounded-full">
-                                <img src={usuario?.foto} className='h-10 rounded-full'
+                                <img src={usuario?.foto} className='h-10 w-10 rounded-full'
                                     alt="Imagem do Usuário" />
                                 {/* <h3 className='text-lg font-bold text-center uppercase'>{usuario?.nome}</h3> */}
                             </div>
-                            <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome}</h6>
+                            <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome.split(' ').slice(0,1)}</h6>
                         </Link>
 
                         <Link to='/perfil' className='hover:underline'>
@@ -84,11 +85,11 @@ function Navbar() {
                     <div className='flex relative bg-gradient-to-t from-paleta1 from-60% to-paleta4 to-40% shadow-md shadow-paleta4 w-58 rounded-b justify-center items-center  text-paleta4'>
                         <Link to='/perfil' className='hover:underline'>
                             <div className="flex relative w-10 h-10 mb-1 ml-1 bg-paleta4 text-paleta1 items-center gap-0 rounded-full">
-                                <img src={usuario?.foto} className='h-10 rounded-full'
+                                <img src={usuario?.foto} className='h-10 w-10 rounded-full'
                                     alt="Imagem do Usuário" />
                                 {/* <h3 className='text-lg font-bold text-center uppercase'>{usuario?.nome}</h3> */}
                             </div>
-                            <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome}</h6>
+                            <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome.split(' ').slice(0,1)}</h6>
                         </Link>
 
                         <Link to='/perfil' className='hover:underline'>

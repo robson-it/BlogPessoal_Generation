@@ -25,7 +25,7 @@ function Perfil() {
                 src="https://media.licdn.com/dms/image/D4D12AQGXX_D-z2g71w/article-cover_image-shrink_720_1280/0/1668427221036?e=2147483647&v=beta&t=sDiTr5-15JanwO8fd0SsBPCLTpAsC93sbz-mYgQwLeo" alt="Capa do Perfil" />
 
             <img 
-                className='rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10' 
+                className='rounded-full w-56 h-56 mx-auto mt-[-8rem] border-8 border-white relative z-10' 
                 src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} />
 
             <div 
