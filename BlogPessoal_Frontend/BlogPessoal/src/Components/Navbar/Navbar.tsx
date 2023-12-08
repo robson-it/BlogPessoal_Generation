@@ -65,13 +65,13 @@ function Navbar() {
 
 
                         <Link to='/home' className='hover:underline'>
-                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md">
+                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
                                 <House size={28}></House>
                             </div>
                             <h6 className='text-sm text-center ml-12'>Home</h6>
                         </Link>
                         <Link to='' onClick={logout} className='hover:underline'>
-                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md">
+                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
                                 <SignOut size={28}></SignOut>
                             </div>
                             <h6 className='text-sm text-center ml-12'>Sair</h6>
@@ -97,13 +97,13 @@ function Navbar() {
                         <ModalTema id={0} operacao={'novoTema'} />
 
                         <Link to='/home' className='hover:underline'>
-                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4">
+                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 hover:bg-editar">
                                 <House size={28}></House>
                             </div>
                             <h6 className='text-sm text-center ml-12'>Home</h6>
                         </Link>
                         <Link to='' onClick={logout} className='hover:underline'>
-                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4">
+                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 hover:bg-editar">
                                 <SignOut size={28}></SignOut>
                             </div>
                             <h6 className='text-sm text-center ml-12'>Sair</h6>

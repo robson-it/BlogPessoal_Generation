@@ -2,24 +2,22 @@ import Popup from 'reactjs-popup';
 import FormularioPostagem from '../FormularioPostagem/FormularioPostagem';
 import DeletarPostagem from '../DeletarPostagem/DeletarPostagem';
 import { ListPlus, XCircle, Trash, NotePencil } from '@phosphor-icons/react'
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import 'reactjs-popup/dist/index.css';
-import { useEffect, useState } from 'react';
+import './ModalPostagem.css'
+import { useState } from 'react';
 
 
 const ModalPostagem = (propriedades: any) => {
 
     const idModal = propriedades.id
     const operacaoModal = propriedades.operacao
-    const location = useLocation();
+    
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
 
-    useEffect(() => {
-        console.log('fechando o modal - useEffect')
-        closeModal()
-    }, [location.key])
+   
 
     return (
         <>
@@ -28,7 +26,7 @@ const ModalPostagem = (propriedades: any) => {
 
                 <>
                     <p className='hover:underline cursor-pointer' onClick={() => setOpen(o => !o)}>
-                        <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4">
+                        <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 hover:bg-editar">
                             <ListPlus size={28} ></ListPlus>
                         </div>
 
@@ -58,8 +56,8 @@ const ModalPostagem = (propriedades: any) => {
 
                 modal
             >
-                <div className="pl-1 pt-1 container flex justify-end items-center absolute pr-4 text-white " >
-                    <Link to="" className="close" id="fecharModal" onClick={closeModal}>
+                <div className="pl-1 pt-1 container flex justify-end items-center absolute pr-4 text-paleta4 " >
+                    <Link to="/postagens" className="close" id="fecharModal" onClick={closeModal}>
                         <XCircle size={28} weight="bold" />
                     </Link>
                 </div>
