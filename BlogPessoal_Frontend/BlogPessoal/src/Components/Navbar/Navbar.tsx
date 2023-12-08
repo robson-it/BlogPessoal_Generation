@@ -19,9 +19,9 @@ function Navbar() {
     if (usuario.token !== "") {
 
         component = (
-            <div className='w-full bg-indigo-900 text-white flex justify-center py-4'>
+            <div className='w-full bg-paleta4 text-paleta1 flex justify-center py-4'>
                 <div className=" container flex justify-between text-lg">
-                    <Link to='/home' className='text-2xl font-bold'>Blog Pessoal</Link>
+                    <Link to='/home' className='text-2xl font-bold'>Trinitas</Link>
 
                     <div className='flex gap-4'>
                         <Link to='/postagens' className='hover:underline'>Postagens</Link>

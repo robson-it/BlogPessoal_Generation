@@ -1,35 +1,40 @@
 import { Link } from 'react-router-dom'
 import Tema from '../../../models/Tema'
+import { AuthContext } from '../../../contexts/AuthContext' 
+import { useContext} from 'react'
 
 interface CardTemasProps {
     tema: Tema
 }
 
 function CardTemas({ tema }: CardTemasProps) {
+
+    const { usuario, handleLogout } = useContext(AuthContext)
+
     return (
-        <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-            <header className='py-2 px-6 bg-indigo-800 text-white font-bold text-2xl'>
+        <div className='shadow shadow-paleta4 shadow-lg  flex flex-col rounded overflow-hidden justify-between'>
+            <header className='py-2 px-6 bg-paleta4 text-white font-bold text-2xl'>
                 Tema
             </header>
 
-            <p className='p-8 text-3xl bg-slate-200 h-full'>
+            <p className='p-8 text-3xl bg-paleta1 h-full text-paleta4'>
                 {tema.descricao}
             </p>
-
-            <div className="flex">
+            {
+                usuario.usuario === 'root@root.com.br' && 
+            <div className="flex text-paleta1">
                 <Link to={`/editarTema/${tema.id}`}
-                    className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 
-                        flex items-center justify-center py-2'>
+                    className='w-full text-slate-100 bg-paleta2 hover:bg-paleta4 flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>
 
                 <Link to={`/deletarTema/${tema.id}`}
-                    className='text-slate-100 bg-red-400 hover:bg-red-700 w-full 
+                    className='text-slate-100 bg-paleta3 hover:bg-paleta4 w-full 
                         flex items-center justify-center'>
                     <button>Deletar</button>
                 </Link>
             </div>
-
+            }
         </div>
     )
 }

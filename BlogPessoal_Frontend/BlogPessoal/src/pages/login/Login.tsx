@@ -35,8 +35,9 @@ function Login() {
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
-            <form className="flex justify-center items-center flex-col w-1/2 gap-4" 
+            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-gradient-to-t from-paleta1 from-50% to-paleta4 to-50% text-paleta4">
+            <div className="fundoLogin hidden lg:block "></div>
+            <form className="flex justify-center items-center flex-col w-1/2 gap-4  rounded-xl p-10 bg-paleta1 shadow shadow-md shadow-paleta4" 
                     onSubmit={login}>
                     <h4 className="text-slate-900 text-2xl ">Entrar</h4>
                     <div className="flex flex-col w-full">
@@ -65,8 +66,8 @@ function Login() {
                     </div>
                     <button
                         type='submit'
-                        className="rounded bg-indigo-400 flex justify-center
-                                   hover:bg-indigo-900 text-white w-1/2 py-2">
+                        className="rounded bg-paleta2 flex justify-center
+                                   hover:bg-paleta4 text-white w-1/2 py-2">
                         {isLoading ? <RotatingLines
                             strokeColor="white"
                             strokeWidth="5"
@@ -86,7 +87,7 @@ function Login() {
                         </Link>
                     </p>
                 </form>
-                <div className="fundoLogin hidden lg:block"></div>
+                
             </div>
         </>
     );

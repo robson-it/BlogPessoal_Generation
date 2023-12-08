@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Dna } from 'react-loader-spinner';
+import { Vortex } from 'react-loader-spinner';
 
 import { buscar } from '../../../services/Service';
 import { AuthContext } from '../../../contexts/AuthContext';
@@ -45,7 +45,7 @@ function ListaTemas() {
     return (
         <>
             {temas.length === 0 && (
-                <Dna
+                <Vortex
                     visible={true}
                     height="200"
                     width="200"
