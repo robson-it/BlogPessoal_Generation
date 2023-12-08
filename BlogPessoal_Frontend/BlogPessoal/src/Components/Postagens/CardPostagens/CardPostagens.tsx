@@ -33,11 +33,11 @@ function CardPostagens({ post }: CardPostagensProps) {
             {
                 post.usuario?.id === usuario.id && 
             <div className="flex">
-                <Link to={`/editarPostagem/${post.id}`} className='w-full text-white bg-paleta2 
-                    hover:bg-paleta4 flex items-center justify-center py-2'>
+                <Link to={`/editarPostagem/${post.id}`} className='w-full text-white bg-paleta5 
+                    hover:bg-paleta6 flex items-center justify-center py-1'>
                     <button>Editar</button>
                 </Link>
-                <Link to={`/deletarPostagem/${post.id}`} className='text-white bg-paleta3 
+                <Link to={`/deletarPostagem/${post.id}`} className='text-white bg-paleta2 
                     hover:bg-paleta4 w-full flex items-center justify-center'>
                     <button>Deletar</button>
                 </Link>

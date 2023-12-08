@@ -24,12 +24,12 @@ function CardTemas({ tema }: CardTemasProps) {
                 usuario.usuario === 'root@root.com.br' && 
             <div className="flex text-paleta1">
                 <Link to={`/editarTema/${tema.id}`}
-                    className='w-full text-slate-100 bg-paleta2 hover:bg-paleta4 flex items-center justify-center py-2'>
+                    className='w-full text-slate-100 text-paleta1 hover:text-paleta1 bg-paleta5 hover:bg-paleta6 flex items-center justify-center py-0'>
                     <button>Editar</button>
                 </Link>
 
                 <Link to={`/deletarTema/${tema.id}`}
-                    className='text-slate-100 bg-paleta3 hover:bg-paleta4 w-full 
+                    className='text-slate-100 bg-paleta2 hover:bg-paleta4 w-full 
                         flex items-center justify-center'>
                     <button>Deletar</button>
                 </Link>

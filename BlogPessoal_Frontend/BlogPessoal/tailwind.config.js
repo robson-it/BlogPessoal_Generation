@@ -11,6 +11,8 @@ export default {
       paleta2: "#495579",
       paleta3: "#263159",
       paleta4: "#192655",
+      paleta5: "#BCA37F",
+      paleta6: "#776B5D",
       white: "#FFFFFF",
       fundoLogin: "#363636"
     }
