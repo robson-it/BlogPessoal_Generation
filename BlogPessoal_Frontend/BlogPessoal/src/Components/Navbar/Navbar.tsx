@@ -50,10 +50,10 @@ function Navbar() {
 
 
                     <Link to='/home' className='hover:underline'>
-                        <div className="text-white justify-center items-center ml-16 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
+                        <div className="text-white justify-center items-center mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
                             <House size={28}></House>
                         </div>
-                        <h6 className='text-sm text-center ml-16'>Home</h6>
+                        <h6 className='text-sm text-center'>Home</h6>
                     </Link>
                     <Link to='/postagens' className='hover:underline'>
                         <div className="text-white justify-center items-center ml-16 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md hover:bg-editar">
