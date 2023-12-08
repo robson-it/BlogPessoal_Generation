@@ -1,8 +1,8 @@
 import { ReactNode, useContext } from 'react'
-import { FacebookLogo, GithubLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
+import {GithubLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
 
 import { AuthContext } from '../../contexts/AuthContext'
-import { Link } from 'react-router-dom'
+
 
 function Footer() {
 

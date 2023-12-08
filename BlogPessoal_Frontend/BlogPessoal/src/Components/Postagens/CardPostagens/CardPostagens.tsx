@@ -8,7 +8,7 @@ interface CardPostagensProps {
 }
 
 function CardPostagens({ post }: CardPostagensProps) {
-    const { usuario, handleLogout } = useContext(AuthContext)
+    const { usuario } = useContext(AuthContext)
 
     return (
         <div className=' shadow shadow-paleta4 shadow-lg 

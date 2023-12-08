@@ -9,7 +9,7 @@ interface CardTemasProps {
 
 function CardTemas({ tema }: CardTemasProps) {
 
-    const { usuario, handleLogout } = useContext(AuthContext)
+    const { usuario } = useContext(AuthContext)
 
     return (
         <div className='shadow shadow-paleta4 shadow-lg  flex flex-col rounded overflow-hidden justify-between'>
