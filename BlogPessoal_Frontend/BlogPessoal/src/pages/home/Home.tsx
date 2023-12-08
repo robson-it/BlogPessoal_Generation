@@ -1,5 +1,5 @@
 import ListaPostagens from "../../Components/Postagens/ListaPostagens/ListaPostagens"
-import ModalPostagem from "../../Components/Postagens/ModalPostagem/ModalPostagem"
+
 
 function Home() {
     return (
@@ -14,10 +14,8 @@ function Home() {
                             Expresse aqui seus pensamentos e opniões
                         </p>
 
-                        <div className="flex justify-around gap-4">
-                            <div className="flex justify-around gap-4">
-                                <ModalPostagem />
-                            </div>
+                        <div className="flex justify-center">
+                            
                         </div>
                     </div>
 
