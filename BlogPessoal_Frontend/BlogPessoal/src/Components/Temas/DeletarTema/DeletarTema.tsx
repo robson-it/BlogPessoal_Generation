@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { RotatingLines } from "react-loader-spinner";
 
 import { buscar, deletar } from "../../../services/Service";
@@ -8,14 +8,15 @@ import { toastAlerta } from "../../../utils/toastAlerta";
 
 import Tema from "../../../models/Tema";
 
-function DeletarTema() {
+function DeletarTema(props: {idTema?: string}) {
 
     const navigate = useNavigate()
 
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [tema, setTema] = useState<Tema>({} as Tema)
 
-    const { id } = useParams<{ id: string }>()
+    // const { id } = useParams<{ id: string }>()
+    const id = props.idTema
 
     const { usuario, handleLogout } = useContext(AuthContext)
     const token = usuario.token

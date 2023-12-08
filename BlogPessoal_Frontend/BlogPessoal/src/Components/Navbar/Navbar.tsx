@@ -2,9 +2,10 @@ import { ReactNode, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 import { AuthContext } from '../../contexts/AuthContext'
-import { ListPlus, House, SignOut } from '@phosphor-icons/react'
+import { House, SignOut } from '@phosphor-icons/react'
 import { toastAlerta } from '../../utils/toastAlerta'
 import ModalPostagem from '../Postagens/ModalPostagem/ModalPostagem'
+import ModalTema from '../Temas/ModalTemas/ModalTemas'
 
 
 function Navbar() {
@@ -45,9 +46,10 @@ function Navbar() {
         <>
             {component}
 
-            {
-                location.pathname == '/postagens' &&
-                <>
+
+            <>
+                {
+                    location.pathname == '/postagens' &&
                     <div className='flex relative bg-gradient-to-t from-paleta1 from-60% to-paleta4 to-40% shadow-md shadow-paleta4 w-58 rounded-b justify-center items-center  text-paleta4'>
                         <Link to='/perfil' className='hover:underline'>
                             <div className="flex relative w-10 h-10 mb-1 ml-1 bg-paleta4 text-paleta1 items-center gap-0 rounded-full">
@@ -55,10 +57,12 @@ function Navbar() {
                                     alt="Imagem do Usuário" />
                                 {/* <h3 className='text-lg font-bold text-center uppercase'>{usuario?.nome}</h3> */}
                             </div>
-                            <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome.split(' ').slice(0,1)}</h6>
+                            <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome.split(' ').slice(0, 1)}</h6>
                         </Link>
 
+
                         <ModalPostagem id={0} operacao={'novaPostagem'} />
+
 
                         <Link to='/home' className='hover:underline'>
                             <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4 shadow-md">
@@ -73,8 +77,9 @@ function Navbar() {
                             <h6 className='text-sm text-center ml-12'>Sair</h6>
                         </Link>
                     </div>
-                </>
-            }
+                }
+            </>
+
 
             {
                 location.pathname == '/temas' &&
@@ -86,17 +91,11 @@ function Navbar() {
                                     alt="Imagem do Usuário" />
                                 {/* <h3 className='text-lg font-bold text-center uppercase'>{usuario?.nome}</h3> */}
                             </div>
-                            <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome.split(' ').slice(0,1)}</h6>
+                            <h6 className='text-sm text-center ml-1 capitalize'>{usuario?.nome.split(' ').slice(0, 1)}</h6>
                         </Link>
 
-                        
+                        <ModalTema id={0} operacao={'novoTema'} />
 
-                        <Link to='/perfil' className='hover:underline'>
-                            <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4">
-                                <ListPlus size={28}></ListPlus>
-                            </div>
-                            <h6 className='text-sm text-center ml-12'>Novo</h6>
-                        </Link>
                         <Link to='/home' className='hover:underline'>
                             <div className="text-white justify-center items-center ml-12 mb-1 flex relative w-10 h-10 rounded-full bg-paleta4">
                                 <House size={28}></House>

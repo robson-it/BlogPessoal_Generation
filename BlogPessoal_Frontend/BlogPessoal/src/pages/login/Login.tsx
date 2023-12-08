@@ -36,7 +36,9 @@ function Login() {
     return (
         <>
             <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-gradient-to-t from-paleta1 from-50% to-paleta4 to-50% text-paleta4">
-            <div className="fundoLogin hidden lg:block "></div>
+            <div className="fundoLogin hidden lg:block ">
+                <img src='/trinitas2.png' className='mt-56 ml-32'></img>
+            </div>
             <form className="flex justify-center items-center flex-col w-3/4 lg:w-1/2 gap-4  rounded-xl p-10 bg-paleta1 shadow shadow-md shadow-paleta4" 
                     onSubmit={login}>
                     <h4 className="text-slate-900 text-2xl ">Entrar</h4>
