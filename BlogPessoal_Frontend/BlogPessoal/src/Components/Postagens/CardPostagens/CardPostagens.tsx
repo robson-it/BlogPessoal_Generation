@@ -15,12 +15,12 @@ function CardPostagens({ post }: CardPostagensProps) {
             flex flex-col rounded overflow-hidden justify-between bg-paleta1 text-paleta4'>
 
             <div>
-                <div className="flex w-full bg-paleta4 text-paleta1 py-2 px-4 items-center gap-4">
+                <div className="flex w-full bg-gradient-to-t from-paleta1 from-50% to-paleta4 to-50% text-paleta1 py-2 px-4 items-top gap-4">
                     <img src={post.usuario?.foto} className='h-12 rounded-full' 
                         alt="Imagem do Usuário" />
-                    <h3 className='text-lg font-bold text-center uppercase'>{post.usuario?.nome}</h3>
+                    <h5 className='text-md font-semibold text-center capitalize mb-8'>{post.usuario?.nome}</h5>
                 </div>
-                <div className='p-4'>
+                <div className='p-4 pt-0'>
                     <h4 className='text-lg font-semibold uppercase'>{post.titulo}</h4>
                     <p>{post.texto}</p>
                     <p>Tema: {post.tema?.descricao}</p>
